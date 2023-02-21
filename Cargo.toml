@@ -1,0 +1,21 @@
+[package]
+name = "zero2prod-axum-examples"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod_axum_examples"
+
+[dev-dependencies]
+reqwest = "0.11.14"
+
+[dependencies]
+axum = "0.6.4"
+hyper = {version = "0.14.24", features = ["server"]}
+tokio = {version = "1.25.0", features = ["rt-multi-thread", "macros"]}
